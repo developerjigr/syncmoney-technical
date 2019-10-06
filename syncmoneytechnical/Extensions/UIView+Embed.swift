@@ -10,6 +10,11 @@ import UIKit
 
 extension UIView {
 
+	func addToSubviewAndEmbed(into parentView: UIView) {
+		parentView.addSubview(self)
+		self.embed(into: parentView)
+	}
+
 	func embed(into parentView: UIView) {
 		self.translatesAutoresizingMaskIntoConstraints = false
 		NSLayoutConstraint.activate([
