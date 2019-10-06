@@ -20,6 +20,7 @@ class UICollectionViewCardLayout: UICollectionViewFlowLayout {
 			if cellAttribute.representedElementCategory == .cell {
 				let indexPath = cellAttribute.indexPath
 				cellAttribute = self.layoutAttributesForItem(at:indexPath)!
+				cellAttribute.frame = cellAttribute.frame.insetBy(dx: 16, dy: 0)
 			}
 			return cellAttribute
 		}
