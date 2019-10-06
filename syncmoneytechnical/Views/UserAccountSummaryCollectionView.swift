@@ -48,16 +48,27 @@ extension UserAccountSummaryCollectionView: ViewDataConfigurable {
 extension UserAccountSummaryCollectionView: UICollectionViewDataSource {
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 3
+		return 6
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let viewCell = UICollectionViewCell()
-		let view = UIView()
-		view.backgroundColor = .yellow
-		view.layer.cornerRadius = 12
+		guard
+			let viewCell = collectionView.dequeueReusableCell(
+				withReuseIdentifier: String(describing: UserAccountCollectionViewCell.self),
+				for: indexPath
+			) as? UserAccountCollectionViewCell
+		else {
+			fatalError("Unable to deque cell")
+		}
+		if let accountType = accountType {
+			switch accountType {
+			case .bankAccount:
+				viewCell.configureViewForBankAccount()
+			case .syncAccount:
+				viewCell.configureViewForSyncAccount()
+			}
+		}
 
-		view.embed(into: viewCell.contentView)
 		return viewCell
 	}
 
@@ -71,6 +82,10 @@ extension UserAccountSummaryCollectionView: UICollectionViewDelegateFlowLayout {
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		// Open account detail view
+	}
+
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
 	}
 
 }
