@@ -115,6 +115,14 @@ extension UserAccountSummaryCollectionView: UICollectionViewDataSource {
 
 extension UserAccountSummaryCollectionView: UICollectionViewDelegateFlowLayout {
 
+	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+		pageControlIndicator.currentPage =  Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+	}
+
+	func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+		pageControlIndicator.currentPage =  Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+	}
+
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		// Open account detail view
 	}
