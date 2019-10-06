@@ -17,6 +17,8 @@
 		012A02D2234A316000572958 /* UserAccountDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02D1234A316000572958 /* UserAccountDetailViewModel.swift */; };
 		012A02D5234A3CBA00572958 /* UserAccountSummaryCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012A02D4234A3CBA00572958 /* UserAccountSummaryCollectionView.xib */; };
 		012A02D7234A3CCB00572958 /* UserAccountSummaryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02D6234A3CCB00572958 /* UserAccountSummaryCollectionView.swift */; };
+		012A02D9234A41FD00572958 /* UIView+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02D8234A41FD00572958 /* UIView+NibLoadable.swift */; };
+		012A02DC234A425500572958 /* ViewDataConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02DB234A425500572958 /* ViewDataConfigurable.swift */; };
 		012DE794234A0B6E0010BCFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DE793234A0B6E0010BCFE /* AppDelegate.swift */; };
 		012DE796234A0B6E0010BCFE /* UserAccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DE795234A0B6E0010BCFE /* UserAccountSummaryViewController.swift */; };
 		012DE799234A0B6E0010BCFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012DE797234A0B6E0010BCFE /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		012A02D1234A316000572958 /* UserAccountDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountDetailViewModel.swift; sourceTree = "<group>"; };
 		012A02D4234A3CBA00572958 /* UserAccountSummaryCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAccountSummaryCollectionView.xib; sourceTree = "<group>"; };
 		012A02D6234A3CCB00572958 /* UserAccountSummaryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSummaryCollectionView.swift; sourceTree = "<group>"; };
+		012A02D8234A41FD00572958 /* UIView+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoadable.swift"; sourceTree = "<group>"; };
+		012A02DB234A425500572958 /* ViewDataConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataConfigurable.swift; sourceTree = "<group>"; };
 		012DE790234A0B6E0010BCFE /* syncmoneytechnical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = syncmoneytechnical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012DE793234A0B6E0010BCFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012DE795234A0B6E0010BCFE /* UserAccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSummaryViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 		01019B01234A106F00DF14F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				012A02D8234A41FD00572958 /* UIView+NibLoadable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -109,6 +114,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		012A02DA234A424A00572958 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				012A02DB234A425500572958 /* ViewDataConfigurable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		012DE787234A0B6E0010BCFE = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 		012DE792234A0B6E0010BCFE /* syncmoneytechnical */ = {
 			isa = PBXGroup;
 			children = (
+				012A02DA234A424A00572958 /* Helpers */,
 				012A02D3234A3C9300572958 /* Views */,
 				01019B01234A106F00DF14F2 /* Extensions */,
 				01019B00234A106200DF14F2 /* View Controllers */,
@@ -219,9 +233,11 @@
 				01019B06234A122000DF14F2 /* UserAccountModel.swift in Sources */,
 				012DE794234A0B6E0010BCFE /* AppDelegate.swift in Sources */,
 				01019B04234A112A00DF14F2 /* TransactionsModel.swift in Sources */,
+				012A02DC234A425500572958 /* ViewDataConfigurable.swift in Sources */,
 				012A02D0234A284900572958 /* UserAccountDetailViewController.swift in Sources */,
 				012A02D2234A316000572958 /* UserAccountDetailViewModel.swift in Sources */,
 				01019AFE234A0F5C00DF14F2 /* AccountModel.swift in Sources */,
+				012A02D9234A41FD00572958 /* UIView+NibLoadable.swift in Sources */,
 				012A02D7234A3CCB00572958 /* UserAccountSummaryCollectionView.swift in Sources */,
 				012A02CC234A166300572958 /* UserAccountSummaryViewModel.swift in Sources */,
 				012A02CA234A164900572958 /* SViewController.swift in Sources */,
