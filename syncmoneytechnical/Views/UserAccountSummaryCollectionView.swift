@@ -29,6 +29,13 @@ class UserAccountSummaryCollectionView: UIView, NibLoadable {
 		super.init(coder: aDecoder)
 		
 	}
+
+	func configureCollectionView() {
+		let collectionViewFlowLayout = UICollectionViewCardLayout()
+		collectionView.collectionViewLayout = collectionViewFlowLayout
+		collectionView.delegate = self
+		collectionView.dataSource = self
+	}
 	
 }
 
@@ -36,4 +43,34 @@ extension UserAccountSummaryCollectionView: ViewDataConfigurable {
 	func configureView(with viewData: BankAccountViewData) {
 
 	}
+}
+
+extension UserAccountSummaryCollectionView: UICollectionViewDataSource {
+
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return 3
+	}
+
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let viewCell = UICollectionViewCell()
+		let view = UIView()
+		view.backgroundColor = .yellow
+		view.layer.cornerRadius = 12
+
+		view.embed(into: viewCell.contentView)
+		return viewCell
+	}
+
+	func numberOfSections(in collectionView: UICollectionView) -> Int {
+		return 1
+	}
+
+}
+
+extension UserAccountSummaryCollectionView: UICollectionViewDelegateFlowLayout {
+
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		// Open account detail view
+	}
+
 }
