@@ -30,6 +30,7 @@ class UserAccountSummaryViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		setupSyncAccountCollectionView()
+		navigationController?.navigationBar.removeShadowBorder()
 	}
 
 	func setupSyncAccountCollectionView() {
