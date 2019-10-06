@@ -30,13 +30,24 @@ class UserAccountSummaryCollectionView: UIView, NibLoadable {
 		
 	}
 
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		configureCollectionView()
+	}
+
 	func configureCollectionView() {
 		let collectionViewFlowLayout = UICollectionViewCardLayout()
+		collectionViewFlowLayout.scrollDirection = .horizontal
 		collectionView.collectionViewLayout = collectionViewFlowLayout
 		collectionView.delegate = self
 		collectionView.dataSource = self
+
+		collectionView.register(
+			UINib(nibName: String(describing: UserAccountCollectionViewCell.self), bundle: nil),
+			forCellWithReuseIdentifier: String(describing: UserAccountCollectionViewCell.self)
+		)
 	}
-	
+
 }
 
 extension UserAccountSummaryCollectionView: ViewDataConfigurable {
