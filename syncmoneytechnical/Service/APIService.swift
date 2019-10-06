@@ -22,10 +22,20 @@ enum APIError: String, Error {
 }
 
 protocol APIServiceProtocol {
-	typealias AccountsResponseCompletion = (_ success: Bool, _ accounts: [AccountModel], _ error: APIError?) -> Void
-	typealias TransactionsResponseCompletion = (_ success: Bool, _ transactions: [TransactionsModel], _ error: APIError?) -> Void
 
-	func fetchUserAccounts(completion: @escaping AccountsResponseCompletion)
+	typealias AccountResponseCompletion = (
+		_ responseStatus: APIResponseStatus,
+		_ accounts: UserAccountModel,
+		_ error: APIError?
+	) -> Void
+
+	typealias TransactionsResponseCompletion = (
+		_ responseStatus: APIResponseStatus,
+		_ transactions: [TransactionsModel],
+		_ error: APIError?
+	) -> Void
+
+	func fetchUserAccount(completion: @escaping AccountResponseCompletion)
 	func fetchTransactions(forAccount id: String, completion: @escaping TransactionsResponseCompletion)
 }
 
@@ -43,8 +53,8 @@ class APIService: APIServiceProtocol {
 		print("APIService Initialized...")
 	}
 
-	func fetchUserAccounts(
-		completion: @escaping AccountsResponseCompletion
+	func fetchUserAccount(
+		completion: @escaping AccountResponseCompletion
 	) {
 		DispatchQueue.global().async {
 			sleep(1) // Simulating API Response time
@@ -57,8 +67,8 @@ class APIService: APIServiceProtocol {
 			let decoder = JSONDecoder()
 			decoder.dateDecodingStrategy = Constant.decodingStrategy
 
-			let userAccount = try! decoder.decode(UserAccountsModel.self, from: data)
-			completion(true, userAccount.accounts, nil)
+			let userAccount = try! decoder.decode(UserAccountModel.self, from: data)
+			completion(.success, userAccount, nil)
 		}
 	}
 
@@ -78,7 +88,7 @@ class APIService: APIServiceProtocol {
 			decoder.dateDecodingStrategy = Constant.decodingStrategy
 
 			let account = try! decoder.decode(AccountModel.self, from: data)
-			completion(true, account.transactions, nil)
+			completion(.success, account.transactions, nil)
 		}
 	}
 
