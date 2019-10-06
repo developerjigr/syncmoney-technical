@@ -11,14 +11,27 @@ import UIKit
 
 class UserAccountSummaryCollectionView: UIView, NibLoadable {
 
-	typealias ViewDataType = BankAccountViewData
+	typealias ViewDataType = [ViewData]
 
 	@IBOutlet var headerLabel: UILabel!
 	@IBOutlet var moreButton: UIButton!
 
 	@IBOutlet var collectionView: UICollectionView!
-
 	@IBOutlet var pageControlIndicator: UIPageControl!
+
+	var bankAccountViewData: [BankAccountViewData] = [] {
+		didSet {
+			collectionView.reloadData()
+		}
+	}
+
+	var syncAccountViewData: [ViewDataType] = [] {
+		didSet {
+			collectionView.reloadData()
+		}
+	}
+
+	var accountType: AccountType?
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
