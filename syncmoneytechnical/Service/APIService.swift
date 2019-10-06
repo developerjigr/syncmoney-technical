@@ -8,6 +8,14 @@
 
 import Foundation
 
+
+/// Used to determine whether API returned no errors, some errors or a complete fail
+enum APIResponseStatus {
+	case success
+	case partial
+	case failure
+}
+
 enum APIError: String, Error {
 	case noNetwork = "No Network"
 	case permissionDenied = "You don't have permission"
