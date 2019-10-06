@@ -18,7 +18,7 @@ protocol UserAccountDetailDelegate: class {
 
 struct SyncAccountViewData {
 	let currency: String
-	let total: CGFloat
+	let totalAmount: CGFloat
 	let formattedTotal: String
 	let accountName: String
 	let image_url: String
@@ -26,7 +26,7 @@ struct SyncAccountViewData {
 
 struct BankAccountViewData {
 	let currency: String
-	let total: CGFloat
+	let totalAmount: CGFloat
 	let formattedTotal: String
 	let accountName: String
 	let image_url: String
