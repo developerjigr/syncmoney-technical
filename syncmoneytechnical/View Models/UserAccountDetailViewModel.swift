@@ -16,7 +16,7 @@ protocol UserAccountDetailDelegate: class {
 	func didSelectTransaction(_ viewModel: UserAccountDetailViewModel, atIndexPath: IndexPath)
 }
 
-struct SyncAccountViewData {
+struct SyncAccountViewData: ViewData {
 	let currency: String
 	let totalAmount: CGFloat
 	let formattedTotal: String
@@ -24,7 +24,7 @@ struct SyncAccountViewData {
 	let image_url: String
 }
 
-struct BankAccountViewData {
+struct BankAccountViewData: ViewData {
 	let currency: String
 	let totalAmount: CGFloat
 	let formattedTotal: String

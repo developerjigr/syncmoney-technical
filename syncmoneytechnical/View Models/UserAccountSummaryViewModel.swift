@@ -19,6 +19,8 @@ struct SelectedAccount {
 }
 
 struct UserAccountViewData {
+	let totalAmount: String
+	let currencyTypeFull: String
 	let syncAccounts: [SyncAccountViewData]
 	let bankAccounts: [BankAccountViewData]
 }
@@ -80,10 +82,14 @@ class UserAccountSummaryViewModel {
 		let syncAccountsVD = syncAccountViewData()
 
 		return UserAccountViewData(
+			totalAmount: "£1,720.60",
+			currencyTypeFull: "British Pounds",
 			syncAccounts: syncAccountsVD,
 			bankAccounts: bankAccountsVD
 		)
 	}
+
+	
 
 	func bankAccountViewData() -> [BankAccountViewData] {
 		
