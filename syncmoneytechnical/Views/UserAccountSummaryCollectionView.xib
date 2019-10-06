@@ -102,7 +102,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="accountSummaryCollectionView" destination="rU6-hH-x4n" id="c1q-yj-wV9"/>
+                <outlet property="collectionView" destination="rU6-hH-x4n" id="c1q-yj-wV9"/>
                 <outlet property="headerLabel" destination="Agu-Fp-Zff" id="rP7-hv-kGn"/>
                 <outlet property="moreButton" destination="7DS-YQ-c5d" id="URL-uO-sU5"/>
                 <outlet property="pageControlIndicator" destination="J1J-sT-iDt" id="kx9-ir-1Fw"/>

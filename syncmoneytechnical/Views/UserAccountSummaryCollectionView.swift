@@ -14,7 +14,7 @@ class UserAccountSummaryCollectionView: UIView {
 	@IBOutlet var headerLabel: UILabel!
 	@IBOutlet var moreButton: UIButton!
 
-	@IBOutlet var accountSummaryCollectionView: UICollectionView!
+	@IBOutlet var collectionView: UICollectionView!
 
 	@IBOutlet var pageControlIndicator: UIPageControl!
 
