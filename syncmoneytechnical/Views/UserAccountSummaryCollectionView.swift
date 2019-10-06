@@ -50,9 +50,20 @@ class UserAccountSummaryCollectionView: UIView, NibLoadable {
 
 }
 
-extension UserAccountSummaryCollectionView: ViewDataConfigurable {
-	func configureView(with viewData: BankAccountViewData) {
+extension UserAccountSummaryCollectionView {
+	func configureView(with viewData: [ViewData]) {
+	}
 
+	func configureView(for accountType: AccountType) {
+		self.accountType = accountType
+		switch accountType {
+		case .bankAccount:
+			headerLabel.text = "Bank Accounts (6)"
+		case .syncAccount:
+			headerLabel.text = "sync. Accounts (6)"
+		}
+		pageControlIndicator.numberOfPages = 6
+		collectionView.reloadData()
 	}
 }
 
