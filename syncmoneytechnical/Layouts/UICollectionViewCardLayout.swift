@@ -11,46 +11,39 @@ import UIKit
 
 class UICollectionViewCardLayout: UICollectionViewFlowLayout {
 
-	var addedItem: IndexPath?
-
-	override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-		guard
-			let defaultAttributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath),
-			let collectionView = collectionView,
-			let added = addedItem,
-			added == itemIndexPath
-		else {
-			debugPrint("Unable to get attributes for cell layout at \(itemIndexPath)")
-			return nil
+	override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+		guard let attributes = super.layoutAttributesForElements(in: rect) else {
+			fatalError("Unable to get attribures for elements of collectionview")
 		}
-
-		defaultAttributes.center = CGPoint(x: collectionView.frame.width/2, y: collectionView.frame.height/2)
-		defaultAttributes.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
-		return defaultAttributes
-	}
-
-	override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-		guard
-			let defaultAttributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath),
-			let added = addedItem,
-			added == itemIndexPath
-		else {
-			return nil
+		return attributes.map { attribute in
+			var cellAttribute = attribute
+			if cellAttribute.representedElementCategory == .cell {
+				let indexPath = cellAttribute.indexPath
+				cellAttribute = self.layoutAttributesForItem(at:indexPath)!
+			}
+			return cellAttribute
 		}
-
-		return defaultAttributes
 	}
 
 	override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 		guard
-			let defaultAttributes = super.layoutAttributesForItem(at: indexPath),
+			let defaultAttributes = super.layoutAttributesForItem(at: indexPath)?.copy() as? UICollectionViewLayoutAttributes,
 			let collectionView = collectionView
 		else {
 			debugPrint("Unable to get attributes for cell layout at \(indexPath)")
 			return nil
 		}
+
+		let cellOriginPoint = CGPoint(
+			x: collectionView.frame.origin.x + (collectionView.frame.width * CGFloat(indexPath.row)),
+			y: collectionView.frame.origin.y
+		)
+
+		let newCellSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+
 		defaultAttributes.center = CGPoint(x: collectionView.frame.width/2, y: collectionView.frame.height/2)
-		defaultAttributes.frame = collectionView.frame
+		defaultAttributes.frame = CGRect(origin: cellOriginPoint, size: newCellSize)
+
 		return defaultAttributes
 	}
 }
