@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class UserAccountSummaryCollectionView: UIView {
+class UserAccountSummaryCollectionView: UIView, NibLoadable {
+
+	typealias ViewDataType = BankAccountViewData
 
 	@IBOutlet var headerLabel: UILabel!
 	@IBOutlet var moreButton: UIButton!
@@ -28,4 +30,10 @@ class UserAccountSummaryCollectionView: UIView {
 		
 	}
 	
+}
+
+extension UserAccountSummaryCollectionView: ViewDataConfigurable {
+	func configureView(with viewData: BankAccountViewData) {
+
+	}
 }
