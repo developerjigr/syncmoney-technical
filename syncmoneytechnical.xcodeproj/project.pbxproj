@@ -26,6 +26,7 @@
 		012A02E7234A774300572958 /* UserSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02E6234A774300572958 /* UserSummaryHeaderView.swift */; };
 		012A02E9234A7D2A00572958 /* UserSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012A02E8234A7D2A00572958 /* UserSummaryHeaderView.xib */; };
 		012A02EB234A82D700572958 /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02EA234A82D700572958 /* String+Format.swift */; };
+		012A02ED234AA76500572958 /* UINavigationBar+RemoveShadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02EC234AA76500572958 /* UINavigationBar+RemoveShadows.swift */; };
 		012DE794234A0B6E0010BCFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DE793234A0B6E0010BCFE /* AppDelegate.swift */; };
 		012DE796234A0B6E0010BCFE /* UserAccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DE795234A0B6E0010BCFE /* UserAccountSummaryViewController.swift */; };
 		012DE799234A0B6E0010BCFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012DE797234A0B6E0010BCFE /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		012A02E6234A774300572958 /* UserSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSummaryHeaderView.swift; sourceTree = "<group>"; };
 		012A02E8234A7D2A00572958 /* UserSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSummaryHeaderView.xib; sourceTree = "<group>"; };
 		012A02EA234A82D700572958 /* String+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
+		012A02EC234AA76500572958 /* UINavigationBar+RemoveShadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+RemoveShadows.swift"; sourceTree = "<group>"; };
 		012DE790234A0B6E0010BCFE /* syncmoneytechnical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = syncmoneytechnical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012DE793234A0B6E0010BCFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012DE795234A0B6E0010BCFE /* UserAccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSummaryViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				012A02D8234A41FD00572958 /* UIView+NibLoadable.swift */,
 				012A02E0234A4C6600572958 /* UIView+Embed.swift */,
 				012A02EA234A82D700572958 /* String+Format.swift */,
+				012A02EC234AA76500572958 /* UINavigationBar+RemoveShadows.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				01019AFE234A0F5C00DF14F2 /* AccountModel.swift in Sources */,
 				012A02D9234A41FD00572958 /* UIView+NibLoadable.swift in Sources */,
 				012A02D7234A3CCB00572958 /* UserAccountSummaryCollectionView.swift in Sources */,
+				012A02ED234AA76500572958 /* UINavigationBar+RemoveShadows.swift in Sources */,
 				012A02EB234A82D700572958 /* String+Format.swift in Sources */,
 				012A02CC234A166300572958 /* UserAccountSummaryViewModel.swift in Sources */,
 				012A02CA234A164900572958 /* SViewController.swift in Sources */,

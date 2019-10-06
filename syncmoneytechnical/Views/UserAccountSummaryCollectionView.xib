@@ -66,7 +66,7 @@
                         <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-E9-wJf" userLabel="CollectionViewContainer">
                             <rect key="frame" x="0.0" y="34" width="361" height="240"/>
                             <subviews>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rU6-hH-x4n">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rU6-hH-x4n">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="240"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <collectionViewLayout key="collectionViewLayout" id="Vt9-rO-Vt2" customClass="UICollectionViewCardLayout" customModule="syncmoneytechnical" customModuleProvider="target"/>
