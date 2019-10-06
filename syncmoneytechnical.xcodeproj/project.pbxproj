@@ -19,6 +19,8 @@
 		012A02D7234A3CCB00572958 /* UserAccountSummaryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02D6234A3CCB00572958 /* UserAccountSummaryCollectionView.swift */; };
 		012A02D9234A41FD00572958 /* UIView+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02D8234A41FD00572958 /* UIView+NibLoadable.swift */; };
 		012A02DC234A425500572958 /* ViewDataConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02DB234A425500572958 /* ViewDataConfigurable.swift */; };
+		012A02DF234A468900572958 /* UICollectionViewCardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02DE234A468900572958 /* UICollectionViewCardLayout.swift */; };
+		012A02E1234A4C6600572958 /* UIView+Embed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A02E0234A4C6600572958 /* UIView+Embed.swift */; };
 		012DE794234A0B6E0010BCFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DE793234A0B6E0010BCFE /* AppDelegate.swift */; };
 		012DE796234A0B6E0010BCFE /* UserAccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DE795234A0B6E0010BCFE /* UserAccountSummaryViewController.swift */; };
 		012DE799234A0B6E0010BCFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012DE797234A0B6E0010BCFE /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		012A02D6234A3CCB00572958 /* UserAccountSummaryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSummaryCollectionView.swift; sourceTree = "<group>"; };
 		012A02D8234A41FD00572958 /* UIView+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoadable.swift"; sourceTree = "<group>"; };
 		012A02DB234A425500572958 /* ViewDataConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataConfigurable.swift; sourceTree = "<group>"; };
+		012A02DE234A468900572958 /* UICollectionViewCardLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCardLayout.swift; sourceTree = "<group>"; };
+		012A02E0234A4C6600572958 /* UIView+Embed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Embed.swift"; sourceTree = "<group>"; };
 		012DE790234A0B6E0010BCFE /* syncmoneytechnical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = syncmoneytechnical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012DE793234A0B6E0010BCFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012DE795234A0B6E0010BCFE /* UserAccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSummaryViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				012A02D8234A41FD00572958 /* UIView+NibLoadable.swift */,
+				012A02E0234A4C6600572958 /* UIView+Embed.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,6 +127,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		012A02DD234A466D00572958 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				012A02DE234A468900572958 /* UICollectionViewCardLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		012DE787234A0B6E0010BCFE = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +154,7 @@
 		012DE792234A0B6E0010BCFE /* syncmoneytechnical */ = {
 			isa = PBXGroup;
 			children = (
+				012A02DD234A466D00572958 /* Layouts */,
 				012A02DA234A424A00572958 /* Helpers */,
 				012A02D3234A3C9300572958 /* Views */,
 				01019B01234A106F00DF14F2 /* Extensions */,
@@ -228,8 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012A02E1234A4C6600572958 /* UIView+Embed.swift in Sources */,
 				012DE796234A0B6E0010BCFE /* UserAccountSummaryViewController.swift in Sources */,
 				01019AFB234A0E9E00DF14F2 /* APIService.swift in Sources */,
+				012A02DF234A468900572958 /* UICollectionViewCardLayout.swift in Sources */,
 				01019B06234A122000DF14F2 /* UserAccountModel.swift in Sources */,
 				012DE794234A0B6E0010BCFE /* AppDelegate.swift in Sources */,
 				01019B04234A112A00DF14F2 /* TransactionsModel.swift in Sources */,
