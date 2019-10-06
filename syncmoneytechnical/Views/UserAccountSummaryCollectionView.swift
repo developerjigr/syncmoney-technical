@@ -11,9 +11,21 @@ import UIKit
 
 class UserAccountSummaryCollectionView: UIView {
 
+	@IBOutlet var headerLabel: UILabel!
+	@IBOutlet var moreButton: UIButton!
+
+	@IBOutlet var accountSummaryCollectionView: UICollectionView!
+
+	@IBOutlet var pageControlIndicator: UIPageControl!
+
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+
+	}
 
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
 	}
+	
 }

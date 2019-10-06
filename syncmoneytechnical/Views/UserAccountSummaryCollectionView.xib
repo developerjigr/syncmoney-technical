@@ -18,14 +18,14 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ouE-io-epS">
                     <rect key="frame" x="0.0" y="0.0" width="361" height="305"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpN-QQ-4Tg">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="24"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpN-QQ-4Tg" userLabel="Header Stack View">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="44"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Au-dS-3A5" userLabel="LabelContainer">
-                                    <rect key="frame" x="0.0" y="0.0" width="164.5" height="24"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="317" height="44"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sync.Accounts (0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agu-Fp-Zff">
-                                            <rect key="frame" x="0.0" y="0.0" width="164.5" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="sync.Accounts (0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agu-Fp-Zff">
+                                            <rect key="frame" x="0.0" y="0.0" width="297" height="44"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -33,33 +33,28 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Agu-Fp-Zff" secondAttribute="trailing" id="27c-fX-cpo"/>
-                                        <constraint firstAttribute="height" constant="24" id="DpQ-kf-ntU"/>
+                                        <constraint firstAttribute="trailing" secondItem="Agu-Fp-Zff" secondAttribute="trailing" constant="20" symbolic="YES" id="27c-fX-cpo"/>
+                                        <constraint firstAttribute="height" constant="44" id="DpQ-kf-ntU"/>
                                         <constraint firstItem="Agu-Fp-Zff" firstAttribute="top" secondItem="4Au-dS-3A5" secondAttribute="top" id="HVo-0m-rcp"/>
                                         <constraint firstAttribute="bottom" secondItem="Agu-Fp-Zff" secondAttribute="bottom" id="ZqE-dc-SfI"/>
                                         <constraint firstItem="Agu-Fp-Zff" firstAttribute="leading" secondItem="4Au-dS-3A5" secondAttribute="leading" id="aVS-Fo-NCx"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33M-Gr-rnq" userLabel="ButtonContainer">
-                                    <rect key="frame" x="164.5" y="0.0" width="196.5" height="24"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DS-YQ-c5d">
-                                            <rect key="frame" x="67.5" y="-3" width="46" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="1Kr-rN-Gnk"/>
-                                                <constraint firstAttribute="width" constant="44" id="6on-dr-xj9"/>
-                                            </constraints>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DS-YQ-c5d">
+                                    <rect key="frame" x="317" y="0.0" width="44" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="26T-ko-mpb"/>
+                                        <constraint firstAttribute="width" constant="44" id="nqj-FR-Hqa"/>
+                                    </constraints>
+                                    <state key="normal" image="arrows"/>
+                                </button>
                             </subviews>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-E9-wJf" userLabel="CollectionViewContainer">
-                            <rect key="frame" x="0.0" y="38" width="361" height="229"/>
+                            <rect key="frame" x="0.0" y="58" width="361" height="209"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rU6-hH-x4n">
-                                    <rect key="frame" x="0.0" y="0.0" width="361" height="229"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="209"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uer-lf-isX">
                                         <size key="itemSize" width="50" height="50"/>
@@ -106,7 +101,16 @@
                 <constraint firstItem="ouE-io-epS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sSf-iQ-juZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="accountSummaryCollectionView" destination="rU6-hH-x4n" id="c1q-yj-wV9"/>
+                <outlet property="headerLabel" destination="Agu-Fp-Zff" id="rP7-hv-kGn"/>
+                <outlet property="moreButton" destination="7DS-YQ-c5d" id="URL-uO-sU5"/>
+                <outlet property="pageControlIndicator" destination="J1J-sT-iDt" id="kx9-ir-1Fw"/>
+            </connections>
             <point key="canvasLocation" x="127.2" y="-9.4452773613193415"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrows" width="10" height="15"/>
+    </resources>
 </document>
