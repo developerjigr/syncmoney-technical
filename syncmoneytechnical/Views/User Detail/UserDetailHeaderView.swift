@@ -20,8 +20,12 @@ struct DetailHeaderViewData {
 class UserDetailHeaderView: UIView, NibLoadable {
 	typealias ViewDataType = DetailHeaderViewData
 
-	@IBOutlet var accountTotalLabel: UILabel!
-	@IBOutlet var accountCurrencyTypeLabel: UILabel!
+	@IBOutlet var imageView: UIImageView!
+	@IBOutlet var currencyLabel: UILabel!
+	@IBOutlet var accountNameLabel: UILabel!
+	@IBOutlet var accountDescriptionLabel: UILabel!
+	@IBOutlet var totalBalanceLabel: UILabel!
+	@IBOutlet var availableBalanceLabel: UILabel!
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -33,19 +37,22 @@ class UserDetailHeaderView: UIView, NibLoadable {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
+		setupView()
+	}
 
+	func setupView() {
+		imageView.roundedFrame()
 	}
 }
 
 extension UserDetailHeaderView: ViewDataConfigurable {
 
 	func configureView(with viewData: DetailHeaderViewData) {
-		self.accountTotalLabel.attributedText = viewData.amount.formatPrice(for: .header)
-		self.accountCurrencyTypeLabel.text = viewData.currencyName
+
 	}
 
 	func configureView() {
-		self.accountTotalLabel.attributedText = accountTotalLabel.attributedText?.string.formatPrice(for: .header)
+		totalBalanceLabel.attributedText = totalBalanceLabel.attributedText?.string.formatPrice(for: .header)
 	}
 
 

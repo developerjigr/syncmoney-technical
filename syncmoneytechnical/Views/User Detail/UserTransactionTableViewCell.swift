@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+
+class UserTransactionTableViewCell: UITableViewCell, NibLoadable {
+
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+	}
+
+	override func awakeFromNib() {
+		super.awakeFromNib()
+	}
+
+
+}
