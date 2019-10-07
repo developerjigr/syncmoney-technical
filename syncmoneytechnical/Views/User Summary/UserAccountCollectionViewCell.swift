@@ -39,10 +39,7 @@ class UserAccountCollectionViewCell: UICollectionViewCell, NibLoadable {
 	}
 
 	func setupView() {
-		imageView.layer.cornerRadius = imageView.frame.width / 2
-		imageView.layer.masksToBounds = true
-		imageView.clipsToBounds = true
-
+		imageView.roundedFrame()
 		containerView.layer.borderColor = UIColor.white.cgColor
 		containerView.layer.borderWidth = 4
 		containerView.layer.cornerRadius = 15
