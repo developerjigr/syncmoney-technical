@@ -21,7 +21,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV4-Kb-hqB">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQV-K2-aZ2" userLabel="contentView">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQV-K2-aZ2" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3z-Yh-Dyd">
@@ -37,15 +37,15 @@
                                                     <constraint firstAttribute="height" constant="280" placeholder="YES" id="lCH-EP-Tx1"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vN8-gu-1ZC" userLabel="bankViewContainer">
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vN8-gu-1ZC" userLabel="bankViewContainer">
                                                 <rect key="frame" x="0.0" y="420" width="375" height="340"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="340" id="lzb-Le-YlI"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.94624892979452058" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Yuz-AS-frK" firstAttribute="top" secondItem="t3z-Yh-Dyd" secondAttribute="bottom" id="0mj-am-CMt"/>
                                             <constraint firstItem="t3z-Yh-Dyd" firstAttribute="leading" secondItem="fQV-K2-aZ2" secondAttribute="leading" id="24X-Be-ctj"/>
@@ -60,6 +60,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="fQV-K2-aZ2" secondAttribute="bottom" priority="750" id="OQQ-I4-XVu"/>
                                     <constraint firstAttribute="trailing" secondItem="fQV-K2-aZ2" secondAttribute="trailing" id="PPZ-KS-gT4"/>
@@ -70,7 +71,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rV4-Kb-hqB" secondAttribute="trailing" id="dD5-Uo-wuh"/>
                             <constraint firstItem="rV4-Kb-hqB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hBl-Qy-c2P"/>
@@ -123,6 +124,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E6L-Vo-ltZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BaF-xF-epX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
