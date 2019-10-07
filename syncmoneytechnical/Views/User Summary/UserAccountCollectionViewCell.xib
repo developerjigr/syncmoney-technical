@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="318" height="213"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azv-LY-JuM">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azv-LY-JuM" customClass="GradientView" customModule="syncmoneytechnical" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="318" height="213"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fyQ-6c-Cti">
@@ -135,6 +135,20 @@
                             <constraint firstAttribute="trailing" secondItem="fyQ-6c-Cti" secondAttribute="trailing" id="P8B-Xs-Fes"/>
                             <constraint firstItem="fyQ-6c-Cti" firstAttribute="top" secondItem="Azv-LY-JuM" secondAttribute="top" constant="20" id="oML-Tw-2NL"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.95686274510000002" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="0.75"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>

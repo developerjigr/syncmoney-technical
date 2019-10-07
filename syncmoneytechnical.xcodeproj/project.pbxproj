@@ -34,6 +34,12 @@
 		012DE79B234A0B730010BCFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012DE79A234A0B730010BCFE /* Assets.xcassets */; };
 		012DE79E234A0B730010BCFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012DE79C234A0B730010BCFE /* LaunchScreen.storyboard */; };
 		01A8CC15234B786300BEAB31 /* UIColor+ExtraColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8CC14234B786300BEAB31 /* UIColor+ExtraColors.swift */; };
+		01F31084234BB5B2008B0FCD /* UserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F31083234BB5B2008B0FCD /* UserDetailHeaderView.swift */; };
+		01F31086234BB602008B0FCD /* UserDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F31085234BB602008B0FCD /* UserDetailHeaderView.xib */; };
+		01F31088234BB7BE008B0FCD /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F31087234BB7BE008B0FCD /* GradientView.swift */; };
+		01F3108A234BBC05008B0FCD /* UIImageView+RoundFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F31089234BBC05008B0FCD /* UIImageView+RoundFrame.swift */; };
+		01F3108C234BBE6F008B0FCD /* UserTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F3108B234BBE6F008B0FCD /* UserTransactionTableViewCell.swift */; };
+		01F3108E234BBE7C008B0FCD /* UserTransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F3108D234BBE7C008B0FCD /* UserTransactionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,12 @@
 		012DE79D234A0B730010BCFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		012DE79F234A0B730010BCFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01A8CC14234B786300BEAB31 /* UIColor+ExtraColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ExtraColors.swift"; sourceTree = "<group>"; };
+		01F31083234BB5B2008B0FCD /* UserDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailHeaderView.swift; sourceTree = "<group>"; };
+		01F31085234BB602008B0FCD /* UserDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailHeaderView.xib; sourceTree = "<group>"; };
+		01F31087234BB7BE008B0FCD /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		01F31089234BBC05008B0FCD /* UIImageView+RoundFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RoundFrame.swift"; sourceTree = "<group>"; };
+		01F3108B234BBE6F008B0FCD /* UserTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		01F3108D234BBE7C008B0FCD /* UserTransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTransactionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,7 @@
 				012A02EA234A82D700572958 /* String+Format.swift */,
 				012A02EC234AA76500572958 /* UINavigationBar+RemoveShadows.swift */,
 				012A02EE234B726400572958 /* UIView+ExtendedView.swift */,
+				01F31089234BBC05008B0FCD /* UIImageView+RoundFrame.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -132,12 +145,8 @@
 		012A02D3234A3C9300572958 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				012A02D4234A3CBA00572958 /* UserAccountSummaryCollectionView.xib */,
-				012A02D6234A3CCB00572958 /* UserAccountSummaryCollectionView.swift */,
-				012A02E2234A599400572958 /* UserAccountCollectionViewCell.xib */,
-				012A02E4234A59BD00572958 /* UserAccountCollectionViewCell.swift */,
-				012A02E6234A774300572958 /* UserSummaryHeaderView.swift */,
-				012A02E8234A7D2A00572958 /* UserSummaryHeaderView.xib */,
+				01A8CC17234BB4E700BEAB31 /* User Detail */,
+				01A8CC16234BB4D200BEAB31 /* User Summary */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +156,7 @@
 			children = (
 				012A02DB234A425500572958 /* ViewDataConfigurable.swift */,
 				01A8CC14234B786300BEAB31 /* UIColor+ExtraColors.swift */,
+				01F31087234BB7BE008B0FCD /* GradientView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -179,9 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				012A02DD234A466D00572958 /* Layouts */,
+				01019B01234A106F00DF14F2 /* Extensions */,
 				012A02DA234A424A00572958 /* Helpers */,
 				012A02D3234A3C9300572958 /* Views */,
-				01019B01234A106F00DF14F2 /* Extensions */,
 				01019B00234A106200DF14F2 /* View Controllers */,
 				01019B02234A107400DF14F2 /* View Models */,
 				01019AF9234A0E7100DF14F2 /* Service */,
@@ -192,6 +202,30 @@
 				012DE79F234A0B730010BCFE /* Info.plist */,
 			);
 			path = syncmoneytechnical;
+			sourceTree = "<group>";
+		};
+		01A8CC16234BB4D200BEAB31 /* User Summary */ = {
+			isa = PBXGroup;
+			children = (
+				012A02D4234A3CBA00572958 /* UserAccountSummaryCollectionView.xib */,
+				012A02D6234A3CCB00572958 /* UserAccountSummaryCollectionView.swift */,
+				012A02E2234A599400572958 /* UserAccountCollectionViewCell.xib */,
+				012A02E4234A59BD00572958 /* UserAccountCollectionViewCell.swift */,
+				012A02E6234A774300572958 /* UserSummaryHeaderView.swift */,
+				012A02E8234A7D2A00572958 /* UserSummaryHeaderView.xib */,
+			);
+			path = "User Summary";
+			sourceTree = "<group>";
+		};
+		01A8CC17234BB4E700BEAB31 /* User Detail */ = {
+			isa = PBXGroup;
+			children = (
+				01F31083234BB5B2008B0FCD /* UserDetailHeaderView.swift */,
+				01F31085234BB602008B0FCD /* UserDetailHeaderView.xib */,
+				01F3108B234BBE6F008B0FCD /* UserTransactionTableViewCell.swift */,
+				01F3108D234BBE7C008B0FCD /* UserTransactionTableViewCell.xib */,
+			);
+			path = "User Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F31086234BB602008B0FCD /* UserDetailHeaderView.xib in Resources */,
 				012DE79E234A0B730010BCFE /* LaunchScreen.storyboard in Resources */,
+				01F3108E234BBE7C008B0FCD /* UserTransactionTableViewCell.xib in Resources */,
 				012DE79B234A0B730010BCFE /* Assets.xcassets in Resources */,
 				012A02D5234A3CBA00572958 /* UserAccountSummaryCollectionView.xib in Resources */,
 				012A02E3234A599400572958 /* UserAccountCollectionViewCell.xib in Resources */,
@@ -269,7 +305,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				012A02EF234B726400572958 /* UIView+ExtendedView.swift in Sources */,
+				01F3108A234BBC05008B0FCD /* UIImageView+RoundFrame.swift in Sources */,
+				01F31088234BB7BE008B0FCD /* GradientView.swift in Sources */,
 				012A02E7234A774300572958 /* UserSummaryHeaderView.swift in Sources */,
+				01F3108C234BBE6F008B0FCD /* UserTransactionTableViewCell.swift in Sources */,
 				012A02E1234A4C6600572958 /* UIView+Embed.swift in Sources */,
 				012DE796234A0B6E0010BCFE /* UserAccountSummaryViewController.swift in Sources */,
 				01019AFB234A0E9E00DF14F2 /* APIService.swift in Sources */,
@@ -279,6 +318,7 @@
 				01019B04234A112A00DF14F2 /* TransactionsModel.swift in Sources */,
 				012A02DC234A425500572958 /* ViewDataConfigurable.swift in Sources */,
 				012A02D0234A284900572958 /* UserAccountDetailViewController.swift in Sources */,
+				01F31084234BB5B2008B0FCD /* UserDetailHeaderView.swift in Sources */,
 				012A02E5234A59BD00572958 /* UserAccountCollectionViewCell.swift in Sources */,
 				012A02D2234A316000572958 /* UserAccountDetailViewModel.swift in Sources */,
 				01019AFE234A0F5C00DF14F2 /* AccountModel.swift in Sources */,

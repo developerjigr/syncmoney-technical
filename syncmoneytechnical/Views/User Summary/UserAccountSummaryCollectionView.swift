@@ -69,9 +69,10 @@ class UserAccountSummaryCollectionView: UIView, NibLoadable {
 	}
 
 	func addRoundedEdgeToHeader() {
-		headerStyleView.addRoundedEdge(desiredCurve: Constant.headerViewRadius, position: .bottom)
-		headerStyleView.backgroundColor = Constant.topHeaderColor
+	headerStyleView.addRoundedEdge(desiredCurve: Constant.headerViewRadius, position: .bottom)
+		headerStyleView.alpha = 1
 		headerStyleView.isOpaque = true
+		headerStyleView.setNeedsDisplay()
 	}
 
 }

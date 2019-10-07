@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserSummaryHeaderView" customModule="syncmoneytechnical" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ql-Oh-Jtr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="54N-KZ-lyd">
+                            <rect key="frame" x="0.0" y="29.5" width="375" height="68"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYP-4P-gjU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz9-d5-Pqy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="OM8-Xw-1Ml"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="£1,720.70">
+                                                    <attributes>
+                                                        <font key="NSFont" size="48" name="HelveticaNeue-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tz9-d5-Pqy" firstAttribute="top" secondItem="aYP-4P-gjU" secondAttribute="top" id="87p-Eo-ZSB"/>
+                                        <constraint firstItem="tz9-d5-Pqy" firstAttribute="leading" secondItem="aYP-4P-gjU" secondAttribute="leading" id="FbB-FF-tmD"/>
+                                        <constraint firstAttribute="trailing" secondItem="tz9-d5-Pqy" secondAttribute="trailing" id="Ph8-mn-EWj"/>
+                                        <constraint firstAttribute="bottom" secondItem="tz9-d5-Pqy" secondAttribute="bottom" id="ntr-p4-RfV"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16S-2E-Rdy">
+                                    <rect key="frame" x="0.0" y="48" width="375" height="20"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="British Pounds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seW-CX-XBh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="yFN-n2-zmz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="seW-CX-XBh" secondAttribute="bottom" id="45L-jP-rWk"/>
+                                        <constraint firstItem="seW-CX-XBh" firstAttribute="leading" secondItem="16S-2E-Rdy" secondAttribute="leading" id="DV5-0d-ijw"/>
+                                        <constraint firstItem="seW-CX-XBh" firstAttribute="top" secondItem="16S-2E-Rdy" secondAttribute="top" id="d2q-Yy-KfK"/>
+                                        <constraint firstAttribute="trailing" secondItem="seW-CX-XBh" secondAttribute="trailing" id="eUt-4U-2wZ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="54N-KZ-lyd" firstAttribute="centerY" secondItem="9ql-Oh-Jtr" secondAttribute="centerY" id="29n-l1-wfC"/>
+                        <constraint firstItem="54N-KZ-lyd" firstAttribute="centerX" secondItem="9ql-Oh-Jtr" secondAttribute="centerX" id="CL5-3f-Opx"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                            <real key="value" value="0.90000000000000002"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                            <real key="value" value="1.2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" red="0.95686274510000002" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9ql-Oh-Jtr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6d8-Ou-xqT"/>
+                <constraint firstAttribute="trailing" secondItem="9ql-Oh-Jtr" secondAttribute="trailing" id="EJl-C8-iHo"/>
+                <constraint firstItem="9ql-Oh-Jtr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ubD-SW-2iV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9ql-Oh-Jtr" secondAttribute="bottom" id="wG7-4P-yUF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="accountTotalLabel" destination="tz9-d5-Pqy" id="5bE-w5-Teq"/>
+            </connections>
+            <point key="canvasLocation" x="135.19999999999999" y="-131.78410794602701"/>
+        </view>
+    </objects>
+</document>
