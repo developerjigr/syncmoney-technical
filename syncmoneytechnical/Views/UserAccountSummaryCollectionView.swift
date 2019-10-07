@@ -11,8 +11,15 @@ import UIKit
 
 class UserAccountSummaryCollectionView: UIView, NibLoadable {
 
+	enum Constant {
+		static let topHeaderColor: UIColor = .white
+		static let headerViewRadius: CGFloat = 1.5
+	}
+
 	typealias ViewDataType = [ViewData]
 
+	@IBOutlet var headerStyleViewContainer: UIView!
+	@IBOutlet var headerStyleView: UIView!
 	@IBOutlet var headerLabel: UILabel!
 	@IBOutlet var moreButton: UIButton!
 
@@ -59,6 +66,12 @@ class UserAccountSummaryCollectionView: UIView, NibLoadable {
 			UINib(nibName: String(describing: UserAccountCollectionViewCell.self), bundle: nil),
 			forCellWithReuseIdentifier: String(describing: UserAccountCollectionViewCell.self)
 		)
+	}
+
+	func addRoundedEdgeToHeader() {
+		headerStyleView.addRoundedEdge(desiredCurve: Constant.headerViewRadius, position: .bottom)
+		headerStyleView.backgroundColor = Constant.topHeaderColor
+		headerStyleView.isOpaque = true
 	}
 
 }
