@@ -10,6 +10,11 @@ import UIKit
 
 class UserAccountSummaryViewController: UIViewController {
 
+	enum Constant {
+		static let pageHeaderColor: UIColor = .headerColor
+		static let pageBodyColor: UIColor = .bodyColor
+	}
+
 	//Should ideally be a table view with collection view nibs as cells
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var headerViewContainer: UIView!
@@ -31,6 +36,12 @@ class UserAccountSummaryViewController: UIViewController {
 		// Do any additional setup after loading the view.
 		setupSyncAccountCollectionView()
 		navigationController?.navigationBar.removeShadowBorder()
+		setBackgroundColors()
+	}
+
+	func setBackgroundColors() {
+		scrollView.backgroundColor = Constant.pageBodyColor
+		headerViewContainer.backgroundColor = Constant.pageHeaderColor
 	}
 
 	func setupSyncAccountCollectionView() {
@@ -54,7 +65,11 @@ class UserAccountSummaryViewController: UIViewController {
 		summaryHeaderView = headerViewNib
 		syncAccountCollection = syncCollectionViewNib
 		bankAccountCollection = bankCollectionViewNib
+	}
 
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		syncAccountCollection?.addRoundedEdgeToHeader()
 	}
 
 
