@@ -1,24 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E6L-Vo-ltZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--All Accounts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="UserAccountSummaryViewController" customModule="syncmoneytechnical" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV4-Kb-hqB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQV-K2-aZ2" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3z-Yh-Dyd">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                                <color key="backgroundColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="Yct-8k-dTu"/>
+                                                </constraints>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yuz-AS-frK" userLabel="syncViewContainer">
+                                                <rect key="frame" x="0.0" y="140" width="375" height="280"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="280" placeholder="YES" id="lCH-EP-Tx1"/>
+                                                </constraints>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vN8-gu-1ZC" userLabel="bankViewContainer">
+                                                <rect key="frame" x="0.0" y="420" width="375" height="340"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="340" id="lzb-Le-YlI"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94624892979452058" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Yuz-AS-frK" firstAttribute="top" secondItem="t3z-Yh-Dyd" secondAttribute="bottom" id="0mj-am-CMt"/>
+                                            <constraint firstItem="t3z-Yh-Dyd" firstAttribute="leading" secondItem="fQV-K2-aZ2" secondAttribute="leading" id="24X-Be-ctj"/>
+                                            <constraint firstAttribute="trailing" secondItem="t3z-Yh-Dyd" secondAttribute="trailing" id="DQ5-Q2-k3S"/>
+                                            <constraint firstAttribute="trailing" secondItem="vN8-gu-1ZC" secondAttribute="trailing" id="Fcj-09-AC4"/>
+                                            <constraint firstItem="vN8-gu-1ZC" firstAttribute="top" secondItem="Yuz-AS-frK" secondAttribute="bottom" id="JOX-t1-U82"/>
+                                            <constraint firstItem="t3z-Yh-Dyd" firstAttribute="top" secondItem="fQV-K2-aZ2" secondAttribute="top" id="MHe-YF-d4a"/>
+                                            <constraint firstItem="Yuz-AS-frK" firstAttribute="leading" secondItem="fQV-K2-aZ2" secondAttribute="leading" id="PMk-fZ-Gad"/>
+                                            <constraint firstItem="vN8-gu-1ZC" firstAttribute="leading" secondItem="fQV-K2-aZ2" secondAttribute="leading" id="UHQ-Xr-CGt"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yuz-AS-frK" secondAttribute="trailing" id="aux-Bt-PdE"/>
+                                            <constraint firstAttribute="bottom" secondItem="vN8-gu-1ZC" secondAttribute="bottom" id="pVv-gI-bk0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fQV-K2-aZ2" secondAttribute="bottom" priority="750" id="OQQ-I4-XVu"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQV-K2-aZ2" secondAttribute="trailing" id="PPZ-KS-gT4"/>
+                                    <constraint firstItem="fQV-K2-aZ2" firstAttribute="top" secondItem="rV4-Kb-hqB" secondAttribute="top" id="gm7-I2-d6G"/>
+                                    <constraint firstItem="fQV-K2-aZ2" firstAttribute="leading" secondItem="rV4-Kb-hqB" secondAttribute="leading" id="p6T-wR-4Eh"/>
+                                    <constraint firstItem="fQV-K2-aZ2" firstAttribute="centerX" secondItem="rV4-Kb-hqB" secondAttribute="centerX" id="rzv-Tt-Jut"/>
+                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="fQV-K2-aZ2" secondAttribute="bottom" id="z67-QZ-r57"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rV4-Kb-hqB" secondAttribute="trailing" id="dD5-Uo-wuh"/>
+                            <constraint firstItem="rV4-Kb-hqB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hBl-Qy-c2P"/>
+                            <constraint firstItem="rV4-Kb-hqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pEI-Q7-Jxy"/>
+                            <constraint firstItem="rV4-Kb-hqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xoQ-Zi-PxP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="All Accounts" largeTitleDisplayMode="never" id="mIv-ck-tP3">
+                        <barButtonItem key="leftBarButtonItem" image="nav_menu_icon" id="OmC-gx-MrQ">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="nav_card_icon" id="ZaA-QI-LoE">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bankAccountCollectionViewContainer" destination="vN8-gu-1ZC" id="ghb-Va-Dls"/>
+                        <outlet property="headerViewContainer" destination="t3z-Yh-Dyd" id="H90-ND-8YW"/>
+                        <outlet property="scrollView" destination="rV4-Kb-hqB" id="C3l-Rx-Jdq"/>
+                        <outlet property="syncAccountCollectionViewContainer" destination="Yuz-AS-frK" id="lZE-2R-i1h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2018.4000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Accounts-->
+        <scene sceneID="DrS-jg-Bts">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HLR-qJ-o3r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Accounts" image="accounts_icon" id="iiR-vi-o8W"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r33-r1-qXg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p6L-us-hxB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCP-jV-G97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="133.5832083958021"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9FQ-gX-kv7">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E6L-Vo-ltZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BaF-xF-epX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HLR-qJ-o3r" kind="relationship" relationship="viewControllers" id="1Sr-0v-K9S"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qan-V7-Yyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="accounts_icon" width="32" height="26"/>
+        <image name="nav_card_icon" width="24" height="24"/>
+        <image name="nav_menu_icon" width="35" height="27"/>
+    </resources>
 </document>

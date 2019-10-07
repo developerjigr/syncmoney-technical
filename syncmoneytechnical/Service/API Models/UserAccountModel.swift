@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct UserAccountsModel: Codable {
-	let accounts: [AccountModel]
+struct UserAccountModel: Codable {
+	let syncAccounts: [AccountModel]
+	let bankAccounts: [AccountModel]
 }
