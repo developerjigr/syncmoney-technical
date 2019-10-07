@@ -53,7 +53,6 @@ class UserAccountSummaryViewController: UIViewController {
 			fatalError("Problem loading UserAccountSummaryCollectionView nib")
 		}
 
-
 		headerViewNib.configureView()
 		syncCollectionViewNib.configureView(for: .syncAccount)
 		bankCollectionViewNib.configureView(for: .bankAccount)
